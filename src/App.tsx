@@ -2,12 +2,7 @@ import React, {useRef} from 'react';
 import './App.css';
 import { Canvas, useFrame, MeshProps  } from '@react-three/fiber'
 
-type Props = {
-  position?: number[];
-  name?: string;
-}
-
-const Box = (props: Props) => {
+const Box = (props: MeshProps) => {
   const ref = useRef<MeshProps>()
 
   useFrame((_, delta) => {
